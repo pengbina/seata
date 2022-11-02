@@ -13,6 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
+
 import io.seata.common.ApplicationKeeper;
 import io.seata.rm.RMClient;
 import io.seata.tm.TMClient;
@@ -29,6 +30,16 @@ import org.springframework.jdbc.core.JdbcTemplate;
  * The type App test.
  *
  * @author sharajava
+ * <p>
+ *
+ * 首先一个Seata的客户端启动一般分为几个流程：
+ * 1.自动加载各种Bean及配置信息
+ * 2.初始化TM
+ * 3.初始化RM(具体服务)
+ * 4.初始化分布式事务客户端完成，代理数据源
+ * 5.连接TC(Seata服务端)，注册RM,注册TM
+ * 6.开启全局事务
+ *
  */
 public class AppTest {
 
