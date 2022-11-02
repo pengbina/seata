@@ -23,6 +23,9 @@ import io.seata.server.session.GlobalSession;
  * The interface Core.
  *
  * @author sharajava
+ *
+ * Core接口为seata处理全球事务协调器TC的核心处理器，它继承ResourceManagerOutbound接口，接受来自RM的rpc网络请求(branchRegister,branchReport,lockQuery)。
+ * 同时继承TransactionManager接口，接受来自TM的rpc网络请求(begin,commit,rollback,getStatus),另外提供3个接口方法。
  */
 public interface Core extends TransactionCoordinatorInbound, TransactionCoordinatorOutbound {
 

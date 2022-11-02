@@ -19,6 +19,9 @@ package io.seata.sqlparser;
  * The interface Sql recognizer.
  *
  * @author sharajava
+ *
+ * SQLRecognizer识别sql类型，获取表名，表别名以及原生sql
+ *
  */
 public interface SQLRecognizer {
 

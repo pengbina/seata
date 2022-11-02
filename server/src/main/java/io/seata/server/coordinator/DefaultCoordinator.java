@@ -78,6 +78,10 @@ import static io.seata.common.Constants.UNDOLOG_DELETE;
 
 /**
  * The type Default coordinator.
+ *
+ * DefaultCoordinator即为TC，全局事务默认的事务协调器。它继承AbstractTCInboundHandler接口，为TC接收RM和TM的request请求数据，是进行相应处理的处理器。
+ * 实现TransactionMessageHandler接口，去处理收到的RPC信息。
+ * 实现ResourceManagerInbound接口，发送至RM的branchCommit，branchRollback请求。
  */
 public class DefaultCoordinator extends AbstractTCInboundHandler implements TransactionMessageHandler, Disposable {
 

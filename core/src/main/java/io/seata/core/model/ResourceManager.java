@@ -21,6 +21,9 @@ import java.util.Map;
  * Resource Manager: common behaviors.
  *
  * @author sharajava
+ *
+ * ResourceManager是seata的重要组件之一，RM负责管理分支数据资源的事务
+ *
  */
 public interface ResourceManager extends ResourceManagerInbound, ResourceManagerOutbound {
 

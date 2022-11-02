@@ -34,6 +34,7 @@ import org.slf4j.LoggerFactory;
  * Template of executing business logic with a global transaction.
  *
  * @author sharajava
+ * TransactionalTemplate模板类提供了一个开启事务，执行业务，成功提交和失败回滚的模板方法execute(TransactionalExecutor business)
  */
 public class TransactionalTemplate {
 

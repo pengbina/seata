@@ -65,6 +65,8 @@ import static io.seata.common.DefaultValues.TM_INTERCEPTOR_ORDER;
  * The type Global transactional interceptor.
  *
  * @author slievrly
+ *
+ * GlobalTransactionalInterceptor实现aop的MethodInterceptor接口，对有@GlobalTransactional或GlobalLock注解的方法进行代理。
  */
 public class GlobalTransactionalInterceptor implements ConfigurationChangeListener, MethodInterceptor, SeataInterceptor {
 

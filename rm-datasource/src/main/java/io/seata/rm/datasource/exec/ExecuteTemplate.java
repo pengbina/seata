@@ -34,6 +34,8 @@ import io.seata.sqlparser.util.JdbcConstants;
  * The type Execute template.
  *
  * @author sharajava
+ *
+ * ExecuteTemplate为具体statement的execute，executeQuery和executeUpdate执行提供模板方法
  */
 public class ExecuteTemplate {
 

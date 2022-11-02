@@ -38,6 +38,10 @@ import java.util.concurrent.TimeoutException;
  * abstract ResourceManager
  *
  * @author zhangsen
+ *
+ * AbstractResourceManager实现ResourceManager提供模板方法。
+ * DefaultResourceManager适配所有的ResourceManager，所有方法调用都委派给对应负责的ResourceManager处理。
+ *
  */
 public abstract class AbstractResourceManager implements ResourceManager {
 

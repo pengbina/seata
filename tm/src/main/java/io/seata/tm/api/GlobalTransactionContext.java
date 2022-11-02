@@ -23,6 +23,8 @@ import io.seata.core.model.GlobalStatus;
  * GlobalTransaction API
  *
  * @author sharajava
+ *
+ * GlobalTransactionContext为操作GlobalTransaction的工具类，提供创建新的GlobalTransaction，获取当前线程有的GlobalTransaction等方法。
  */
 public class GlobalTransactionContext {
 

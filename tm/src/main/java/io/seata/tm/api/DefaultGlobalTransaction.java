@@ -33,13 +33,19 @@ import static io.seata.common.DefaultValues.DEFAULT_TM_ROLLBACK_RETRY_COUNT;
  * The type Default global transaction.
  *
  * @author sharajava
+ *
+ * DefaultGlobalTransaction是GlobalTransaction接口的默认实现，它持有TransactionManager对象，默认开启事务超时时间为60秒，
+ * 默认名称为default,因为调用者的业务方法可能多重嵌套创建多个GlobalTransaction对象开启事务方法，因此，GlobalTransaction有
+ * GlobalTransactionRole角色属性，只有Launcher角色的才有开启，提交，回滚事务的权利。
  */
 public class DefaultGlobalTransaction implements GlobalTransaction {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DefaultGlobalTransaction.class);
 
+    //默认开启事务超时时间为60秒
     private static final int DEFAULT_GLOBAL_TX_TIMEOUT = 60000;
 
+    //默认名称为default
     private static final String DEFAULT_GLOBAL_TX_NAME = "default";
 
     private TransactionManager transactionManager;

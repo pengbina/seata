@@ -48,6 +48,9 @@ import static io.seata.core.constants.ConfigurationKeys.CLIENT_ASYNC_COMMIT_BUFF
  * The type Async worker.
  *
  * @author sharajava
+ *
+ * DataSourceManager事务提交委派给AsyncWorker进行提交的，因为都成功了，无需回滚成功的数据，
+ * 只需要删除生成的操作日志就行，采用异步方式，提高效率
  */
 public class AsyncWorker {
 

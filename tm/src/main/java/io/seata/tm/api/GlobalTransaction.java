@@ -23,6 +23,8 @@ import io.seata.tm.api.transaction.SuspendedResourcesHolder;
  * Global transaction.
  *
  * @author sharajava
+ *
+ * GlobalTransaction接口提供给用户开启事务，提交，回滚，获取状态等方法。
  */
 public interface GlobalTransaction {
 

@@ -54,6 +54,9 @@ import static io.seata.core.model.GlobalStatus.Committing;
  * The type Global session.
  *
  * @author sharajava
+ *
+ * GlobalSession是seata协调器DefaultCoordinator管理维护的重要部件，当用户开启全局分布式事务，TM调用begin方法请求至TC，TC则创建GlobalSession实例对象，
+ * 返回唯一的xid.它实现SessionLifecycle接口，提供begin,changeStatus,changeBranchStatus,addBranch,removeBranch等操作session和branchSession的方法。
  */
 public class GlobalSession implements SessionLifecycle, SessionStorable {
 

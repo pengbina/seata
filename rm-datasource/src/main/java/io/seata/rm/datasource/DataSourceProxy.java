@@ -43,6 +43,11 @@ import static io.seata.common.DefaultValues.DEFAULT_TABLE_META_CHECKER_INTERVAL;
  * The type Data source proxy.
  *
  * @author sharajava
+ *
+ * DataSourceProxy实现Resource接口，BranchType为AT自动模式。它继承AbstractDataSourceProxy代理类，
+ * 所有的DataSource相关的方法调用传入的targetDataSource代理类的方法，除了创建connection方法为创建ConnectionProxy代理类。
+ * 对象初始化时获取连接的jdbcUrl作为resourceId,并注册至DefaultResourceManager进行管理。
+ * 同时还提供获取原始连接不被代理的getPlainConnection方法。
  */
 public class DataSourceProxy extends AbstractDataSourceProxy implements Resource {
 

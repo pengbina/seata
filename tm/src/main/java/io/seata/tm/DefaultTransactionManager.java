@@ -41,6 +41,11 @@ import java.util.concurrent.TimeoutException;
  * The type Default transaction manager.
  *
  * @author sharajava
+ *
+ * TransactionManagerHolder为创建单例TransactionManager的工厂，
+ * 可以使用EnhancedServiceLoader的spi机制加载用户自定义的类，
+ * 默认为DefaultTransactionManager
+ *
  */
 public class DefaultTransactionManager implements TransactionManager {
 

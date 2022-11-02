@@ -42,6 +42,9 @@ import org.slf4j.LoggerFactory;
  * The type Data source manager.
  *
  * @author sharajava
+ *
+ * DataSourceManager是AT模式核心管理器，DataSourceManager继承AbstractResourceManager,管理数据库Resource的注册，提交以及回滚等。
+ *
  */
 public class DataSourceManager extends AbstractResourceManager {
 

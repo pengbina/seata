@@ -72,6 +72,11 @@ import static io.seata.common.DefaultValues.DEFAULT_TX_GROUP_OLD;
  * The type Global transaction scanner.
  *
  * @author slievrly
+ *
+ * GlobalTransactionScanner继承AbstractAutoProxyCreator类，即实现了SmartInstantiationAwareBeanPostProcessor接口，
+ * 会在spring容器启动初始化bean时候，对bean进行代理操作。
+ * wrapIfNecessary为继承父类代理bean的核心方法，如果用户配置了service.disableGlobalTransaction为false属性则注解不生效直接返回，
+ * 否则对GlobalTransactional或GlobalLock的方法进行拦截代理。
  */
 public class GlobalTransactionScanner extends AbstractAutoProxyCreator
         implements ConfigurationChangeListener, InitializingBean, ApplicationContextAware, DisposableBean {

@@ -20,6 +20,8 @@ import io.seata.core.model.LockStatus;
 
 /**
  * The interface Locker.
+ *
+ * Locker接口提供根据行数据获取锁，释放锁，是否锁住和清除所有锁的方法。
  */
 public interface Locker {
 

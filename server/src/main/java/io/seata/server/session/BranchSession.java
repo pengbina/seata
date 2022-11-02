@@ -39,6 +39,9 @@ import static io.seata.core.model.LockStatus.Locked;
  * The type Branch session.
  *
  * @author sharajava
+ *
+ * BranchSession为分支session，管理分支数据，受globalSession统一调度管理，它的lock和unlock方法由lockManager实现。
+ *
  */
 public class BranchSession implements Lockable, Comparable<BranchSession>, SessionStorable {
 

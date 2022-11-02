@@ -21,6 +21,12 @@ import io.seata.common.exception.NotSupportYetException;
  * The type Undo executor factory.
  *
  * @author sharajava
+ *
+ * UndoExecutorFactory根据sqlType生成对应的AbstractUndoExecutor。
+ *
+ * UndoExecutor为生成执行undoSql的核心。如果全局事务回滚，
+ * 它会根据beforeImage和afterImage以及sql类型生成对应的反向sql执行回滚数据，
+ * 并添加脏数据校验机制，使回滚数据更加可靠。
  */
 public class UndoExecutorFactory {
 

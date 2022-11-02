@@ -27,6 +27,8 @@ import io.seata.server.session.GlobalSession;
  * The interface Lock manager.
  *
  * @author sharajava
+ *
+ * DefaultLockManager是LockManager的默认实现，它获取branchSession的lockKey，转换成List,委派Locker进行处理。
  */
 public interface LockManager {
 
